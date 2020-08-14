@@ -1,0 +1,30 @@
+<div fxLayout="column" fxLayoutGap="1rem">
+  <div fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="left center">
+    <span>
+      <h5>Select Document Type : </h5>
+    </span>
+    <div>
+      <mat-form-field>
+        <mat-select [(ngModel)]="selectedDocumentType">
+          <mat-option *ngFor="let documentType of documentTypeList" [value]="documentType.code">{{ documentType.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+
+    <ng-container [ngSwitch]="selectedDocumentType">
+      <ng-container *ngSwitchCase="'PDF'">
+        <pdf-component></pdf-component>
+      </ng-container>
+      <ng-container *ngSwitchCase="'XLS'">
+        <xls-component></xls-component>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <test-component></test-component>
+      </ng-container>
+    </ng-container>
+
+  </div>
+</div>

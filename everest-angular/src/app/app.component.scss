@@ -1,0 +1,14 @@
+:host {
+    .menu-spacer {
+        flex: 1 1 auto;
+    }
+
+    ::ng-deep .custom-background {
+        background-color: #3f51b5 !important;
+        color: #ffffff !important;
+    }
+
+    ::ng-deep .navbar-dark .navbar-nav .nav-link {
+        color: #ffffff !important;
+    }
+}

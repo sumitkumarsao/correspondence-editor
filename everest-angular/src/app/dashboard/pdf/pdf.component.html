@@ -1,0 +1,24 @@
+<h4>Enter the following details</h4>
+
+<table class="mt-3">
+  <tr>
+    <td><span>Name</span></td>
+    <td><input type="text" [(ngModel)]="details.name" name="name"></td>
+  </tr>
+  <tr>
+    <td><span>Age(Integer)</span></td>
+    <td><input type="number" [(ngModel)]="details.age" name="age"></td>
+  </tr>
+  <tr>
+    <td><span>Country</span></td>
+    <td><input type="text" [(ngModel)]="details.country" name="country"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <button mat-raised-button color="primary" (click)="onSubmit()" fxLayout="row">
+        <span>Submit</span>
+      </button>
+    </td>
+  </tr>
+</table>
